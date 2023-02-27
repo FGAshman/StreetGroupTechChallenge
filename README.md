@@ -5,7 +5,7 @@ Input csv using the 2022 Land Registry data from https://www.gov.uk/government/s
 
 Completed using Python 3.6.6 and Apache Beam 2.38.0
 
-Solution uses apache beam to load in the data, create a unique ID from the full address (PAON + SAON + street + locality + city + district + county + postcode), and then group by this ID to generate a newline delimited JSON file containing full address, transaction IDs, number of transactions, most recent transfer date, max/min price the property was sold for, if the address was a new build and the property type. Any other fields missed from the transaction data can be looked up using the transaction ID.
+Solution uses apache beam to load in the data, groups by the full address (PAON + SAON + street + locality + city + district + county + postcode), and then generate a newline delimited JSON file containing full address, transaction IDs, number of transactions, most recent transfer date, max/min price the property was sold for, if the address was a new build and the property type. Any other fields missed from the transaction data can be looked up using the transaction ID. Address ID is created using the in-built string hashing creating a random 16 digit ID for each address.
 
 Usage:
 
