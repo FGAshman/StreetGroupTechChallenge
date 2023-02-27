@@ -9,14 +9,14 @@ Solution uses apache beam to load in the data, groups by the full address (PAON 
 
 Usage:
 
-```python ./path/to/directory interview_tech_challenge_beam.py --input_file --output_path --postcode_filter```
+```python ./path/to/directory/interview_tech_challenge_beam.py --input_file --output_path --postcode_filter```
 
 input_file and output_path are required arguments and need to be specified, postcode_filter is optional with default value "" if no filter is wanted/needed.
 
 Example usage to generate the outputs given:
 
-```python ./path/to/directory interview_tech_challenge_beam.py --input_file pp-2022.csv --output_path ./output/beam_output.json --postcode_filter S10```
+```python ./path/to/directory/interview_tech_challenge_beam.py --input_file pp-2022.csv --output_path ./output/beam_output.json --postcode_filter S10```
 
 Have also included a solution that only uses the Pandas library to output a similar newline delimited JSON file which can be used by:
 
-```python ./path/to/directory interview_tech_challenge_pandas.py --input_file pp-2022.csv --output_path ./output/pandas_output.json --postcode_filter S10 --hash_address True```
+```python ./path/to/directory/interview_tech_challenge_pandas.py --input_file pp-2022.csv --output_path ./output/pandas_output.json --postcode_filter S10 --hash_address True```
